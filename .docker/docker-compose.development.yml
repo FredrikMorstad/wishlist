@@ -1,0 +1,12 @@
+version: "3.8"
+name: wishlist-api
+services:
+  wishlist-api:
+    image: wishlist-api
+    build:
+      context: ../
+      dockerfile: .docker/dockerfile.development
+    volumes:
+      - ../:/app
+    ports:
+      - "3000:3000"
